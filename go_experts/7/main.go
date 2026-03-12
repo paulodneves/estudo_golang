@@ -1,0 +1,24 @@
+package main
+
+import "fmt"
+
+func main() {
+	salarios := map[string]int{"Wesley": 1000, "João": 2000, "Maria": 3000}
+	fmt.Println(salarios["Wesley"])
+	delete(salarios, "Wesley")
+	salarios["Wes"] = 5000
+	fmt.Println(salarios["Wes"])
+
+	sal := map[string]int{}
+	sal["Diego"] = 25000
+
+	println(sal["Diego"])
+
+	for nome, salario := range salarios {
+		fmt.Printf("O salario de %s é %d\n", nome, salario)
+	}
+
+	for _, salario := range salarios {
+		fmt.Printf("O salário é %d\n", salario)
+	}
+}
